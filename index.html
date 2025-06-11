@@ -5,19 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ahmad Mind OP</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Ahmad Mind OP</h1>
+    <!-- Background Music -->
+    <audio autoplay loop muted id="bg-music">
+        <source src="background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header data-aos="zoom-in">
+        <h1>AHMAD MIND OP</h1>
         <p>The Ultimate Gaming Experience</p>
     </header>
 
-    <section id="about">
+    <section id="about" data-aos="fade-up">
         <h2>About Me</h2>
-        <p>Hey! I'm Ahmad Mind OP – I create epic Minecraft and Free Fire gaming content. Join my journey full of fun, suspense and gaming madness!</p>
+        <p>Hey! I'm Ahmad Mind OP – I create epic Minecraft and Free Fire content. Join my journey full of fun, horror and gaming madness!</p>
     </section>
 
-    <section id="videos">
+    <section id="videos" data-aos="fade-up">
         <h2>My YouTube Videos</h2>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/-H7v1lo8J-I" frameborder="0" allowfullscreen></iframe>
@@ -29,24 +37,34 @@
         </div>
     </section>
 
-    <section id="socials">
+    <section id="socials" data-aos="fade-up">
         <h2>Follow Me</h2>
         <div class="social-links">
             <a href="https://youtube.com/@AhmadMindOP" target="_blank">YouTube</a>
-            <a href="https://www.instagram.com/mind_army_/profilecard/?igsh=d2twcTJmaGd4MzJ3 target="_blank">Instagram</a>
-            <a href="https://discord.gg/WrhXBtvV7B target="_blank">Discord</a>
+            <a href="https://www.instagram.com/mind_army_/profilecard/?igsh=d2twcTJmaGd4MzJ3" target="_blank">Instagram</a>
+            <a href="https://discord.gg/WrhXBtvV7B" target="_blank">Discord</a>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
         <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/mjkryddd" method="POST">
+        <form action="https://formspree.io/f/mwkgyvqq" method="POST">
             <input type="text" name="name" placeholder="Your Name" required />
             <input type="email" name="email" placeholder="Your Email" required />
             <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
+            <button type="submit" onclick="playClickSound()">Send</button>
         </form>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        function playClickSound() {
+            const audio = new Audio('click.mp3');
+            audio.play();
+        }
+    </script>
 </body>
 </html>
-
