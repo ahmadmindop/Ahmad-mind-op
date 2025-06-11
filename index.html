@@ -1,70 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
     <title>Ahmad Mind OP</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <!-- Background Music -->
-    <audio autoplay loop muted id="bg-music">
+    <audio id="bg-music" autoplay loop>
         <source src="background-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
     </audio>
 
-    <header data-aos="zoom-in">
-        <h1>AHMAD MIND OP</h1>
-        <p>The Ultimate Gaming Experience</p>
-    </header>
-
-    <section id="about" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>Hey! I'm Ahmad Mind OP – I create epic Minecraft and Free Fire content. Join my journey full of fun, horror and gaming madness!</p>
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <h1>Welcome to Ahmad Mind OP</h1>
+        <p>Gaming is not just a hobby, it's a lifestyle.</p>
     </section>
 
-    <section id="videos" data-aos="fade-up">
+    <!-- About Me -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Main Ahmad Mind OP hoon. Minecraft mera world hai. Free Fire meri jaan. Gaming meri identity.</p>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+        <h2>My Skills</h2>
+        <p>Minecraft: <progress value="100" max="100"></progress></p>
+        <p>Free Fire: <progress value="80" max="100"></progress></p>
+        <p>YouTube: <progress value="90" max="100"></progress></p>
+    </section>
+
+    <!-- YouTube Videos -->
+    <section class="videos">
         <h2>My YouTube Videos</h2>
-        <div class="video-container">
+        <div class="video-grid">
             <iframe src="https://www.youtube.com/embed/-H7v1lo8J-I" frameborder="0" allowfullscreen></iframe>
             <iframe src="https://www.youtube.com/embed/D5STYbWFDrs" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="video-container">
+    </section>
+
+    <!-- Shorts Section -->
+    <section class="shorts">
+        <h2>My Shorts</h2>
+        <div class="shorts-grid">
             <iframe src="https://www.youtube.com/embed/-4ou5Hq2vnM" frameborder="0" allowfullscreen></iframe>
             <iframe src="https://www.youtube.com/embed/rS5DrHKFcb4" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
 
-    <section id="socials" data-aos="fade-up">
+    
+    <!-- Social Links -->
+    <section class="social">
         <h2>Follow Me</h2>
-        <div class="social-links">
-            <a href="https://youtube.com/@AhmadMindOP" target="_blank">YouTube</a>
-            <a href="https://www.instagram.com/mind_army_/profilecard/?igsh=d2twcTJmaGd4MzJ3" target="_blank">Instagram</a>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@AhmadMindOP" target="_blank">YouTube</a>
             <a href="https://discord.gg/WrhXBtvV7B" target="_blank">Discord</a>
+            <a href="https://www.instagram.com/mind_army_/profilecard/?igsh=d2twcTJmaGd4MzJ3" target="_blank">Instagram</a>
         </div>
     </section>
 
-    <section id="contact" data-aos="fade-up">
+    <!-- Games Played -->
+    
+    <section class="games">
+        <h2>Games I Play</h2>
+        <ul>
+            <li>Minecraft</li>
+            <li>Free Fire</li>
+            <li>Other Random OP Games</li>
+        </ul>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
         <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/mwkgyvqq" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" onclick="playClickSound()">Send</button>
+        <form name="contact" method="POST" data-netlify="true">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
         </form>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Chat Button -->
+    <a href="https://t.me/Ahmadmind" class="chat-button" target="_blank">Chat with me</a>
+
     <script>
-        AOS.init();
-    </script>
-    <script>
-        function playClickSound() {
-            const audio = new Audio('click.mp3');
-            audio.play();
+      window.addEventListener('click', () => {
+        const music = document.getElementById("bg-music");
+        if (music) {
+          music.play();
         }
+      });
     </script>
+
 </body>
 </html>
